@@ -50,3 +50,23 @@ void push(){
 	}
 }
 
+void pop(){
+	if(antrian.empty()){
+		cout<<"Antrian sudah habis";
+	}else{
+		cout<<"Antrian nomor "<<antrian.front()<<" telah keluar";
+	antrian.pop();
+	}
+}
+
+void empty(){
+	if(antrian.empty()){
+		cout<<"Antrian sudah kosong";
+	}else{
+		while(!antrian.empty()){
+		antrian.pop();
+		}
+		urutan = 1;
+		cout<<"Antrian berhasil dihilangkan"<<endl;
+	}
+}
