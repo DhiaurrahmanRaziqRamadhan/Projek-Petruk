@@ -28,3 +28,25 @@ void showq(queue<int> antrian_apotek){
 	    cout<<endl<<endl;
 	}
 }
+
+//show size
+void shows(queue<int> antrian_apotek){
+	queue<int> jumlah = antrian_apotek;
+	cout<<"Jumlah antrian [Maksimal "<<MAX<<"]"<<endl;
+	cout<<jumlah.size();
+	cout<<endl<<endl;
+}
+
+void push(){
+	if(antrian.size()==MAX){
+		cout<<"Antrian sudah penuh";
+	}else{
+		while(urutan<=MAX){
+			antrian.push(urutan);
+			break;
+		}
+		urutan++;
+		cout<<"Antrian nomor "<<antrian.back()<<" telah masuk";
+	}
+}
+
